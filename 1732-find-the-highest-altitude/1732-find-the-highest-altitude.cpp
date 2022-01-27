@@ -5,8 +5,8 @@ public:
         int ans=0;
         for(int i=0;i<gain.size();++i){
             sum+=gain[i];
-          ans = max(ans, sum);
-               
+            if(sum>ans)     // ans = max(ans, sum);
+                ans=sum;
         }
         return ans;
     }
