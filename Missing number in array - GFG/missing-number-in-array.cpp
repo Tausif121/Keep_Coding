@@ -16,12 +16,13 @@ class Solution{
         // Your code goes here
         int j=0;
         sort(array.begin(),array.end());
-        for(long i=1;i<=n;i++)
+         for(long i=0;i<n;i++)
         {
            
-            if(array[i-1]!=i)
-             return i;
+            if(array[i]!=i+1)
+             return i+1;
         }
+        
     }
 };
 
