@@ -7,26 +7,35 @@ class Solution{
   public:
     vector<int> duplicates(int arr[], int n) {
         // code here
-         vector<int>v;
+        vector<int>v;
         vector<int>v2={-1};
-        unordered_map<int,int>m;
-        
-        for(int i=0; i<n; i++)
+        unordered_map<int, int> mp;
+        int k=0,flag=0;
+        //int map <int,int> mp;
+        for(int i=0;i<n;i++)
         {
-            m[arr[i]]++;
+           mp[arr[i]]++;  
         }
-        for(auto a: m)
+        for(auto i:mp)
         {
-            if(a.second>1)
+            if(i.second>1)
             {
-                v.push_back(a.first);
+            v.push_back(i.first);
+            
+            flag=1;
             }
         }
-        if(v.empty())return v2;
-
-        else sort(v.begin(), v.end());
-        return v;
+        if (flag>0){
+        sort(v.begin(), v.end());
         
+        return v;
+        }
+        else
+        {
+        return v2;
+        }
+        //if(flag==0)
+            
     }
 };
 
