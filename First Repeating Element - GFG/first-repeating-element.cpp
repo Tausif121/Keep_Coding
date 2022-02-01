@@ -12,17 +12,21 @@ class Solution {
     // Function to return the position of the first repeating element.
     int firstRepeated(int arr[], int n) {
     unordered_map<int,int>m;
-    int c=0,flag=0;
+    int ans=-1;
     for(int i=0;i<n;i++)
     {
         m[arr[i]]++;
-        
     }
-     for(int i=0; i<n; i++){
-         if(m[arr[i]]>1)
-         return i+1;
-       }
-      return -1;
+    for (int i = 0; i < n; i++) {
+
+           if (m[arr[i]] > 1) {
+            ans = i + 1;
+            break;
+        }
+    }
+    
+      return ans;
+     
     }
 };
 
