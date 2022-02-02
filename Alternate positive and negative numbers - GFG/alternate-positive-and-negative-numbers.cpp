@@ -8,7 +8,7 @@ using namespace std;
 class Solution{
 public:
 
-		void rearrange(int arr[], int n) 
+	void rearrange(int arr[], int n) 
 	{
 	    
 	 vector<int> pos;
