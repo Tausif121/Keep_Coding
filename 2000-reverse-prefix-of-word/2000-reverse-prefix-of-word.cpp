@@ -1,9 +1,10 @@
 class Solution {
 public:
     string reversePrefix(string &word, char ch) {
-        int i = word.find_first_of(ch);
+        int i = word.find(ch);
         string s, t;
-        if(!i) return word;
+        if(i==-1) 
+            return word;
         else{
             s = word.substr(0, i+1);
             t = word.substr(i+1);
