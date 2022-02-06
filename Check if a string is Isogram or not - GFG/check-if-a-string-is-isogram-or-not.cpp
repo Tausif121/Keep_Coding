@@ -22,11 +22,9 @@ class Solution
         for(auto j:m)
         {
             if(j.second > 1)
-            flag=1;
+           return 0;
         }
-     if(flag==1)
-     return 0;
-     else
+     
      return 1;
     }
 };
