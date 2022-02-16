@@ -1,6 +1,49 @@
 class Solution {
 public:
     int findNumbers(vector<int>& nums) {
+        int res = 0;
+        for (auto num : nums) 
+        {
+        if(to_string(num).length()%2==0)
+        res += 1;
+        }
+        return res;
+    }
+};
+
+
+
+
+/*
+class Solution {
+public:
+    int findNumbers(vector<int>& nums) {
+        int n,count=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            n=nums[i];
+            if(( 10<=n && n<=99) || (1000<=n && n<=9999 ) || ( n==100000 ))
+            {
+               count++;
+            }
+        }
+        return count;
+    }
+};
+*/
+
+
+
+
+
+
+
+
+/*
+
+class Solution {
+public:
+    int findNumbers(vector<int>& nums) {
       int d=0;
       for(int i=0;i<nums.size();i++)
       {
@@ -17,3 +60,4 @@ public:
         return d;
     }
 };
+*/
