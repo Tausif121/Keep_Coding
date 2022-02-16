@@ -25,6 +25,12 @@ int main()
 //Function to locate the occurrence of the string x in the string s.
 int strstr(string s, string x)
 {
-        return s.find(x);
- 
+    //Your code here
+    int n=x.length();
+    for(int i=0;i<s.length();i++){
+        if(s.substr(i,n)==x){
+            return i;
+        }
+    }
+    return -1;
 }
