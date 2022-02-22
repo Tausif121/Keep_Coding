@@ -12,7 +12,7 @@ public:
 	string firstAlphabet(string S)
 	{
 	    // Your code goes here
-	    string st;
+	    string st="";
 	    for(int i=0;i<S.size();i++)
 	    {
 	        if(i==0)
