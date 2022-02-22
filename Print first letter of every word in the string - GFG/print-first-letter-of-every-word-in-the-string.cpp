@@ -13,13 +13,10 @@ public:
 	{
 	    // Your code goes here
 	    string st="";
+	    st+=S[0];
 	    for(int i=0;i<S.size();i++)
 	    {
-	        if(i==0)
-	        {
-	            st+=S[0];
-	        }
-	        else if(S[i]==' ')
+	        if(S[i]==' ')
 	        {
 	          st+=S[i+1];  
 	        }
