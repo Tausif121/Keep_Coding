@@ -13,7 +13,7 @@ class Solution {
         string st="";
         for(int i=0;i<string1.size();i++)
         {
-            if(string2.find(string1[i]) == string::npos)
+            if(string2.find(string1[i]) == -1)
             {
                 st+=string1[i];
             }
