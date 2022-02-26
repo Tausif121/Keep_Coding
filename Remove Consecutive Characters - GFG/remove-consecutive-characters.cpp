@@ -14,7 +14,8 @@ class Solution{
         for(long long i=0;i<S.size();i++)
         {
             if(S[i]!=S[i+1])
-           st.push_back(S[i]);
+           //st.push_back(S[i]);
+           st+=S[i];
         }
         
      return st;   
