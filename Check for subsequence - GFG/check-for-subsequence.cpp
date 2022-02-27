@@ -9,7 +9,7 @@ class Solution{
     bool isSubSequence(string A, string B) 
     {
         int a=0,b=0;
-        while(a<A.size() && b<B.size())
+        while(a<A.size() and b<B.size())
     {
             if(A[a] == B[b])
             {
