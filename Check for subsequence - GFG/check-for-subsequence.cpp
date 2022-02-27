@@ -22,9 +22,9 @@ class Solution{
             }
     }
        if(a==A.size())
-       {
+       
        return true;
-       }
+       
        else
        return false;
     }
