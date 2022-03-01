@@ -10,19 +10,19 @@ class Solution{
     
     string modify (string s)
     {
-        string st="";
+        //string st="";
       for(int i=0;i<s.size();i++)
       {
           if(s[0]>=97 && s[0]<=122)
           {
-              st+=tolower(s[i]);
+              s[i]=tolower(s[i]);
           }
           else
           {
-              st+=toupper(s[i]);
+              s[i]=toupper(s[i]);
           }
       }
-      return st;
+      return s;
     }
 };
 
