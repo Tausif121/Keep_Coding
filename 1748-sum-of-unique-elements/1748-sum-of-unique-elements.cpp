@@ -1,18 +1,12 @@
 class Solution {
 public:
-    int sumOfUnique(vector<int>& nums) {
-     // unordered_map<int,int> m;
-        int c[101]={};
-        int s=0;
-        for(auto i : nums)
-        {
-            c[i]++;
-        }
-        for(int i=0;i<101;i++)
-        {
-            if(c[i] == 1)
-                s+=i;
-        }
-        return s;
-    }
+   int sumOfUnique(vector<int>& nums) {
+    int cnt[101] = {}, res = 0;
+    for (auto n : nums)
+        ++cnt[n];
+    for (auto i = 1; i <= 100; ++i)
+        if (cnt[i] == 1)
+            res += i;
+    return res;
+}
 };
