@@ -7,10 +7,10 @@ public:
         {
             m[nums[i]]++;
         }
-        for(int i=0;i<nums.size();i++)
+        for(auto i : m)
         {
-            if(m[nums[i]]==1)
-                s+=nums[i];
+            if(i.second == 1)
+                s+=i.first;
         }
         return s;
     }
