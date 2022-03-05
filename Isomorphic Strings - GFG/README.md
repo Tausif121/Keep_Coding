@@ -1,5 +1,5 @@
 # Isomorphic Strings
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given two strings '<strong>str1</strong>' and '<strong>str2</strong>', check if these two&nbsp;strings are isomorphic to each other.<br>
 Two strings str1 and str2 are called isomorphic if there is a one to one mapping possible for every character of str1 to every character of str2 while <strong>preserving the order</strong>.<br>
