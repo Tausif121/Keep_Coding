@@ -9,18 +9,19 @@ class Solution{
 public:	
 		
 	string removeDups(string S) 
-	{
-	 string s1="";
-     unordered_map<char,int> m;
-     for(int i=0;i<S.size();++i)
-    {
-        m[S[i]]++;
-        if(m[S[i]] == 1 )
-        {s1+=S[i];
+{
+    // Your code goes here
+    string str="";
+    for(int i=0;i<S.length();i++){
+        if(str.find(S[i])==-1){
+            str=str+S[i];
+        }
+        else{
+            continue;
         }
     }
-    return s1;
-	}
+    return str;
+}
 };
 
 // { Driver Code Starts.
