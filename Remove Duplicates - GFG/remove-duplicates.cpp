@@ -10,23 +10,16 @@ public:
 		
 	string removeDups(string S) 
 	{
-	    string s1="";
-    
-    
-    unordered_map<char,int> m;
-    
-    for(int i=0;i<S.size();i++)
+	 string s1="";
+     unordered_map<char,int> m;
+     for(int i=0;i<S.size();++i)
     {
         m[S[i]]++;
-        
         if(m[S[i]] == 1 )
-        {
-            s1=s1+S[i];
-          
+        {s1+=S[i];
         }
     }
-    
-  return s1;
+    return s1;
 	}
 };
 
