@@ -14,21 +14,12 @@ class Solution
     //Function to find the minimum indexed character.
     int minIndexChar(string str, string patt)
     {
-        // Your code here
-        int pos = -1;
-        int mini = INT_MAX;
-        int flag=0;
-        for(int i=0;i<patt.size();i++)
-        {if(str.find(patt[i]) != -1)
-            {   flag=1;
-                pos=str.find(patt[i]);
-                mini=min(pos,mini);
-            }
-        }
-        if(flag !=0)
-        return mini;
-        else
-        return -1;
+      unordered_set<char> s;
+      for(auto i: patt) s.insert(i);
+      for(int i=0;i<str.size();i++){
+          if(s.find(str[i])!=s.end())return i;
+      }
+      return -1;
     }
 };
 
