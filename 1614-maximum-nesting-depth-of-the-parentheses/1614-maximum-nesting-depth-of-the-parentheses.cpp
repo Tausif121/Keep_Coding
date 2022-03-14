@@ -5,13 +5,11 @@ public:
         int depth = 0;
         for(int i =0 ; i < s.size(); i++)
         {
-             if(s[i] == '('){
+             if(s[i] == '(')
                 depth+=1;
-             res = max(depth,res);
-        }
             else if(s[i] == ')')
                 depth-=1;
-           
+            res = max(depth,res);
         }
     return res;
     }
