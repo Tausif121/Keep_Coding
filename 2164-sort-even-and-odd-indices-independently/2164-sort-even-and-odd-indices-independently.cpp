@@ -12,16 +12,13 @@ public:
         }
         sort(odd.begin(), odd.end(), greater<int>());
         sort(even.begin(), even.end());
-        int i=0;
-        int k=odd.size();
-        int l=even.size();
         vector<int> ans;
        for(int i=0;i<even.size();i++)
         {
-            if(i<l)
+            if(i<even.size())
                 ans.push_back(even[i]);
            
-            if(i<k)
+            if(i<odd.size())
             {
                 ans.push_back(odd[i]);
                
