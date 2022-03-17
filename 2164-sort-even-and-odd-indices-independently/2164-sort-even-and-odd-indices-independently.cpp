@@ -12,19 +12,19 @@ public:
         }
         sort(odd.begin(), odd.end(), greater<int>());
         sort(even.begin(), even.end());
-        int i=0,j=0;
+        int i=0;
         int k=odd.size();
         int l=even.size();
         vector<int> ans;
-        while(i<l || j<k)
+       for(int i=0;i<even.size();i++)
         {
-            if(i<l){
+            if(i<l)
                 ans.push_back(even[i]);
-            i+=1;}
-            if(j<k)
+           
+            if(i<k)
             {
-                ans.push_back(odd[j]);
-              j+=1;  
+                ans.push_back(odd[i]);
+               
             }
         }
         return ans;
