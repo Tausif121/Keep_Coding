@@ -14,11 +14,8 @@ class Solution {
     int NumberofElementsInIntersection(int a[], int b[], int n, int m) {
         // Your code goes here
     int count=0;
-    unordered_set<int> s;
-    for(int i=0;i<n;i++)
-    {
-        s.insert(a[i]);
-    }
+            unordered_set<int>s(a,a+n);
+
     for(int i=0;i<m;i++)
     {
         if(s.find(b[i])!=s.end())
