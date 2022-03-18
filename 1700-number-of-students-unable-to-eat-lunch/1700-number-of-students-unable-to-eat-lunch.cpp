@@ -1,32 +1,29 @@
 class Solution {
 public:
     int countStudents(vector<int>& students, vector<int>& sandwiches) {
-      int circular=0,square=0,count=students.size();
-        for(int i=0;i<students.size();i++)
+      queue<int> ans;
+        int size=students.size();
+        for(int i=0;i<size;i++)
         {
-            if(students[i] == 0)
-                circular+=1;
-            else
-                square+=1;
+            ans.push(students[i]);
         }
-         for(int i=0;i<sandwiches.size();i++)
+        int rot=0;
+        int i=0;
+        while(ans.size()>0 && rot<ans.size())
         {
-            if(sandwiches[i] == 0 )
-                if(circular>0){
-                circular-=1;
-                    count-=1;
-                }
-             
-             else
-                 return count;
-            else
-                if(square>0){
-                square-=1;
-                    count-=1;
-                }
-             else
-                 return count;
+          if(sandwiches[i] == ans.front()){
+              ans.pop();
+              i+=1;
+            rot=0;
+          }
+            else{
+              int val = ans.front();
+              ans.pop();
+            ans.push(val);
+              rot+=1;  
+            }
         }
-        return count;
+       return ans.size(); 
+        
     }
 };
