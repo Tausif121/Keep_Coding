@@ -1,13 +1,8 @@
 class Solution {
 public:
-    int fib(int n) {
-       int a = 0, b = 1;
-        while (n > 0)
-        {
-            b = b + a;
-            a = b - a;
-            n-=1;
-        }
-        return a;
+    int fib(int N) {
+      if(N == 0)  return 0;
+        if(N == 1)  return 1;
+        return fib(N-1) + fib(N-2);
     }
 };
