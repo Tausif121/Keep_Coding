@@ -34,19 +34,18 @@ int main()
 
 int* greaterElement(int arr[], int n)
 {
-    	int copy[n];
+   set<int> s;
     for(int i=0;i<n;i++){
-        copy[i] = arr[i];
+        s.insert(arr[i]);
     }
-    sort(copy,copy+n);
     for(int i=0;i<n;i++){
-       int j = upper_bound(copy,copy+n,arr[i])-copy-1;
-       if(j==n-1){
-            arr[i] = -10000000;
-       }
-       else{
-            arr[i] = copy[j+1];
-       }
+        auto x=s.find(arr[i]);
+        x++;
+        if(x!=s.end()){
+            arr[i]=*x;
+        }else{
+            arr[i]=-10000000;
+        }
     }
     return arr;
 }
