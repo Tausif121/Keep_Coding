@@ -28,20 +28,36 @@ int main() {
 
 
 string isSubset(int a1[], int a2[], int n, int m) {
-    sort(a1,a1+n);
-    sort(a2,a2+m);
-    int c=m;
-    string y="Yes";
+    string yes="Yes";
     string no="No";
+    unordered_set<int> s;
+    for(int i=0;i<n;i++)
+    {
+        s.insert(a1[i]);
+    }
+    
     for(int i=0;i<m;i++)
     {
-    for(int j=0;j<n;j++)
-      {
-        if(a2[i] == a1[j])
-        c-=1;
-      }
+        if(s.find(a2[i]) == s.end())
+        return no;
     }
-    if(c==0)
-    return y;
-    return no;
+    return yes;
+    
+    
+    // sort(a1,a1+n);
+    // sort(a2,a2+m);
+    // int c=m;
+    // string y="Yes";
+    // string no="No";
+    // for(int i=0;i<m;i++)
+    // {
+    // for(int j=0;j<n;j++)
+    //   {
+    //     if(a2[i] == a1[j])
+    //     c-=1;
+    //   }
+    // }
+    // if(c==0)
+    // return y;
+    // return no;
 }
