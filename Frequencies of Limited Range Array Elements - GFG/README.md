@@ -1,5 +1,5 @@
 # Frequencies of Limited Range Array Elements
-##  Easy 
+## Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given an array A[] of N&nbsp;positive integers which can contain integers from 1&nbsp;to P&nbsp;where elements can be repeated or can be absent from the array. Your task is to count the frequency of all elements from 1&nbsp;to N.</span><br>
 <span style="font-size:18px"><strong>Note:</strong> The elements greater than N&nbsp;in the array can be ignored for counting.</span></p>
