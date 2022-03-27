@@ -10,13 +10,16 @@ class Solution{
     { 
         //Create a frequency array and store the frequency
         // of all the element
-        int maxi = max(P,N);
-    	vector<int> count(maxi+1,0);
-        for(int i=0;i<N;i++){
-            count[arr[i]]+=1;
+         int maxi = max(P,N);
+        int temp[maxi+1] = {0};
+        for(int i=0; i<N; i++)
+        {
+            temp[arr[i]]++;
         }
-        for(int i=0;i<N;i++){
-            arr[i] = count[i+1];
+        
+        for(int i=0; i<N; i++)
+        {
+            arr[i] = temp[i+1];
         }
     }
 };
