@@ -1,24 +1,11 @@
 class Solution {
 public:
     int countWords(vector<string>& words1, vector<string>& words2) {
-       map<string,int> m1;
-        map<string,int> m2;
-        int c=0;
-        for(int i=0;i<words1.size();i++)
-        {
-            m1[words1[i]]++;
-        }
-        for(int i=0;i<words2.size();i++)
-        {
-            m2[words2[i]]++;
-        }
-        for(auto &i : words2)
-        {
-            if(m1[i] == 1 && m2[i] == 1)
-            {
-                c+=1;
-            }
-        }
-      return c;  
+        unordered_map<string, pair<int,int>> mp;
+        for(int i = 0 ; i < words1.size() ; i++) mp[words1[i]].first++;
+        for(int i = 0 ; i < words2.size() ; i++) mp[words2[i]].second++;
+        int cnt = 0;
+        for(auto str : mp) if(str.second.first == 1 && str.second.second == 1) cnt++;
+        return cnt;
     }
 };
