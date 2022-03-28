@@ -1,8 +1,7 @@
 class Solution {
 public:
     int countGoodSubstrings(string s) {
-        if(s.size()<3)
-            return 0;
+        
         int c=0;
         string x="";
         for(int i=0;i<s.size();i++)
