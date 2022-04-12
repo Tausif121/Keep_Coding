@@ -22,7 +22,7 @@ class Solution
       s.pop();
       deleteMid(s,n);
       s.push(x);
-      return;
+     // return;
       }
 };
 
