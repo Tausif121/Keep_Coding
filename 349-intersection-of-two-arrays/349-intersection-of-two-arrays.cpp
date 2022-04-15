@@ -6,7 +6,7 @@ public:
         
         for(int i=0;i<nums2.size();i++)
         {
-            if(s.count(nums2[i])){
+            if(s.count(nums2[i]) >0){
                s.erase(nums2[i]);
              v.push_back(nums2[i]);}   
                 
