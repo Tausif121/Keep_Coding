@@ -18,12 +18,14 @@ public:
         }
         vector<ll> tans = nthRowOfPascalTriangle(n-1);
         vector<ll> ans;
-        ans.push_back(1);
-        for(int i=1;i<tans.size();i++)
+        
+        for(int i=0;i<=tans.size();i++)
         {
+            if(i==0 || i==tans.size())
+            ans.push_back(1);
+            else
         ans.push_back((tans[i]+tans[i-1])%1000000007);
         }
-        ans.push_back(1);
         return ans;
     }
     
