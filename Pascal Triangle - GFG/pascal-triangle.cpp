@@ -13,7 +13,7 @@ public:
          if(n==1)
         {
             vector<ll> tmp;
-            tmp.push_back(1ll);
+            tmp.push_back(1);
             return tmp;
         }
         vector<ll> tans = nthRowOfPascalTriangle(n-1);
