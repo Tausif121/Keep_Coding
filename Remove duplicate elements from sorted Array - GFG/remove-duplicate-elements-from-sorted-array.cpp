@@ -18,8 +18,8 @@ public:
             if(a[i]!=a[i+1])
             a[j++] = a[i];
         }
-        a[j++]=a[n-1];
-       return j;
+        a[j]=a[n-1];
+       return j+1;
     }
 };
 
