@@ -11,19 +11,19 @@ class Solution {
                 tmp = nums[low];
                 nums[low] = nums[mid];
                 nums[mid] = tmp;
-                low++;
-                mid++;
+                low+=1;
+                mid+=1;
             }
             else if(nums[mid] == 1)
             {
-                mid++;
+                mid+=1;
             }
             else if(nums[mid] == 2)
             {
                 tmp = nums[high];
                 nums[high] = nums[mid];
                 nums[mid] = tmp;
-                high--;
+                high-=1;
             }
         }
     }
