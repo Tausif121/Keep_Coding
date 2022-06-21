@@ -10,7 +10,8 @@ class Solution{
         void merge(long long arr1[], long long arr2[], int n, int m) 
         { 
             // code here
-            int gap=((m+n)/2)+((m+n)%2);
+            int gap=m+n;
+            gap=(gap/2)+(gap%2);
             while(gap>0)
             {
                 int i=0;
