@@ -36,7 +36,7 @@ class Solution{
                 if(gap<=1)
                 {
                     gap=0;
-                    break;
+                   // break;
                 }
                 else
                 {
