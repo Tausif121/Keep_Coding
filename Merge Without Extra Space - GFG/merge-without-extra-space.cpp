@@ -9,40 +9,23 @@ class Solution{
         //Function to merge the arrays.
         void merge(long long arr1[], long long arr2[], int n, int m) 
         { 
-            // code here
-            int gap=m+n;
-            gap=(gap/2)+(gap%2);
-            while(gap>0)
-            {
-                int i=0;
-                int j=gap;
-                while(j<(m+n))
-                {
-                    if(j<n && arr1[i]>arr1[j])
-                    {
-                        swap(arr1[i],arr1[j]);
-                    }
-                    else if(j>=n && i<n && arr1[i]>arr2[j-n])
-                    {
-                        swap(arr1[i],arr2[j-n]);
-                    }
-                    else if(j>=n && i>=n && arr2[i-n]>arr2[j-n])
-                    {
-                        swap(arr2[i-n],arr2[j-n]);
-                    }
-                    i+=1;
-                    j+=1;
-                }
-                if(gap<=1)
-                {
-                    gap=0;
-                   // break;
-                }
-                else
-                {
-                    gap=(gap/2)+(gap % 2);
-                }
-            }
+           int i = 0, j = 0, k = n - 1;
+    
+    // Until i less than equal to k
+    // or j is less than m
+    while (i <= k && j < m) {
+        if (arr1[i] < arr2[j])
+            i++;
+        else {
+            swap(arr2[j++], arr1[k--]);
+        }
+    }
+    
+    // Sort first array
+    sort(arr1, arr1 + n);
+    
+    // Sort second array
+    sort(arr2, arr2 + m);
         } 
 };
 
